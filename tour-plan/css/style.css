@@ -508,6 +508,9 @@ template {
   .container_sm {
     max-width: 673px;
   }
+  .search__input {
+    width: 340px;
+  }
   .navbar-top {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -532,6 +535,7 @@ template {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
     width: 16px;
     height: 11px;
     -webkit-box-align: center;
