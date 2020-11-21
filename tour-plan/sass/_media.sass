@@ -25,3 +25,25 @@
 @media (max-width: 700px)
     .container
         max-width: 576px
+    .navbar
+        &-menu,.search,.user
+            display: none
+    .menu
+        &-button
+            display: flex
+            width: 16px
+            height: 11px
+            align-items: center
+            justify-content: space-between
+            flex-direction: column
+            border: none
+            background-color: #fff
+            cursor: pointer
+            &__btn-line
+                width: 16px
+                height: 1px
+                background-color: $color
+@media (max-width: 480px)
+    .logo
+        &__image
+            width: 99px
