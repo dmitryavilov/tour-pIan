@@ -16,12 +16,16 @@
         <div class="container">
             <div class="navbar-top">
                 <a href="#" class="logo">
-                    <img src="img/main/horizontal-logo.svg" alt="Logo: Best tour plan" class="logo__image">
+                    <svg class="logo__image">
+                        <use xlink:href="img/sprite.svg#horizontal-logo"></use>
+                    </svg>
                 </a> <!-- /.logo -->
                 <form action="/" method="POST" class="search search_navbar">
                     <input type="text" class="search__input" placeholder="Search location">
                     <button class="search__button">
-                        <img src="img/main/search.svg" alt="Icon: search" class="search__icon">
+                        <svg class="search__icon">
+                            <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
                     </button>
                 </form>
                 <!-- /.searchh -->
@@ -55,6 +59,67 @@
         <!-- /.navbar-menu -->
     </header>
     <!-- /.header-top -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-list__item">
+                    <a href="#" class="breadcrumb-list__link">Home</a>
+                </li>
+                <li class="breadcrumb-list__item">
+                    <a href="#" class="breadcrumb-list__link">Flash Offers</a>
+                </li>
+                <li class="breadcrumb-list__item">
+                    Grand Hilton Hotel
+                </li>
+            </ul>
+            <!-- /.breadcrump-list -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.breadcrump -->
+    <section class="hotel">
+        <div class="container">
+            <div class="hotel-info">
+                <div class="hotel-info__text">
+                    <div class="hotel-wrapper">
+                        <div class="stars">
+                            <svg class="star">
+                                <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="star">
+                                <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="star">
+                                <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="star">
+                                <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                            <svg class="star">
+                                <use xlink:href="img/sprite.svg#star"></use>
+                            </svg>
+                        </div>
+                        <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
+                        <span class="offer hotel-info__offer">Flash Offer</span>
+                    </div>
+                    <!-- /.hotel-wrapper -->
+                    <p class="hotel-description hotel-info__description">Half-Board/ All Inclusive + Complimentary
+                        Activities + Child Stays Free
+                    </p>
+                    <!-- /.stars -->
+                </div>
+                <!-- /.hotel-info__text -->
+                <div class="rating hotel-info__rating">
+                    <span class="rating rating__text">User Rattingg</span>
+                    <span class="rating__counter"></span>
+                </div>
+                <!-- /.hotel-info__rating -->
+            </div>
+            <!-- /.hotel-info -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.hotel -->
 </body>
 
 </html>
