@@ -635,7 +635,7 @@ template {
 
 .swiper-container {
   width: 100%;
-  height: 450px;
+  height: 100%;
   border-radius: 8px;
   position: relative;
 }
@@ -657,6 +657,11 @@ template {
 .slider {
   width: 728px;
   height: 450px;
+}
+
+.slider__image {
+  width: 100%;
+  height: 100%;
 }
 
 .slider-button {
@@ -688,8 +693,7 @@ template {
 .booking {
   background: #0A223D;
   border-radius: 8px;
-  max-width: 350px;
-  width: 100%;
+  width: 350px;
   min-height: 210px;
   padding: 29px 29px 26px 26px;
   color: white;
@@ -831,18 +835,50 @@ template {
 .map {
   width: 347px;
   height: 213px;
-  background-color: red;
+  background-color: gray;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
   }
+  .slider {
+    width: 590px;
+  }
 }
 
 @media (max-width: 992px) {
   .container {
     max-width: 760px;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .hotel-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .slider {
+    width: 100%;
+  }
+  .slider__image {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .booking, .map {
+    width: 340px;
+    height: 210px;
   }
 }
 
@@ -870,6 +906,25 @@ template {
   }
   .navbar-menu__link {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 740px) {
+  .slider {
+    height: 350px;
+  }
+  .hotel-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 450px;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
   }
 }
 
@@ -905,6 +960,9 @@ template {
     width: 16px;
     height: 1px;
     background-color: #333333;
+  }
+  .hotel {
+    padding-top: 0;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
@@ -942,6 +1000,18 @@ template {
 @media (max-width: 480px) {
   .logo__image {
     width: 99px;
+  }
+  .slider {
+    height: 179px;
+  }
+  .hotel__slider {
+    margin-bottom: 20px;
+  }
+  .hotel-right {
+    min-height: 410px;
+  }
+  .map {
+    height: 174px;
   }
 }
 /*# sourceMappingURL=style.css.map */
