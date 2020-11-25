@@ -11,6 +11,19 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b393a38c-6fb1-415b-9e55-d32c4eb273d1&lang=ru_RU"
+        type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [37.775310, -122.435325],
+                zoom: 13
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -197,12 +210,8 @@
                         <button class="button booking__button">View Other Options</button>
                     </div>
                     <!-- /.booking -->
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6307.307063920875!2d-122.42970977251663!3d37.7747213493961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580a196ede719%3A0x2fb5607634331f2f!2zSGF5ZXMgVmFsbGV5LCDQodCw0L0t0KTRgNCw0L3RhtC40YHQutC-LCDQmtCw0LvQuNGE0L7RgNC90LjRjyA5NDEwMiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1606335834216!5m2!1sru!2sru"
-                            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0">
-                        </iframe>
+                    <div class="map" id="map">
+
                     </div>
                     <!-- /.map -->
                 </div>
