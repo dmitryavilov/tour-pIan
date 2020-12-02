@@ -19,6 +19,17 @@
             max-width: 267px
     .variants-wrapper
         grid-gap: 20px
+    .footer
+        &__input
+            width: 100%
+        &-wrapper
+            grid-template-columns: repeat(4, minmax(150px, 480px))
+        &__legal-title, &__legal-ul
+            margin-left: 40px
+        &__title
+            font-size: 16px
+        &__item
+            font-size: 12px
 
 @media (max-width: 992px)
     .container
@@ -77,6 +88,48 @@
             grid-template-columns: 350px 300px
         &__content-wrapper
             margin-left: 32px
+    .footer
+        padding-top: 70px
+        &__logo
+            grid-row: 1/2
+            width: 96px
+            height: 112px
+            margin-top: 0
+        &__social
+            &-network
+                grid-row: 1/2
+                grid-column: span 4
+                margin-top: 52px
+                transform: translate(-3px, 0)
+        &__categories
+            grid-row: 2/3
+        &__categories, &__aditional, &__legal
+            margin-top: 51px
+        &__title
+            font-size: 18px
+        &__item
+            font-size: 14px
+        &__second-title
+            margin-left: 10px
+        &__aditional-ul
+            margin-left: 10px
+        &__contact
+            &-details
+                grid-column: span 3
+                grid-row: 3
+                margin-top: 58px
+            &-form
+                grid-row: 4
+                grid-column: span 3
+            &-title
+                transform: translateY(-1px)
+        &__legal-title, &__legal-ul
+            margin-left: 119px
+        &__input
+            width: 255px
+    .activities
+        padding: 60px 0 50px 0
+
 @media (max-width: 768px)
     .logo
         &__image
@@ -101,6 +154,27 @@
     .newsletter
         &-wrapper
             max-width: 700px
+    .footer
+        padding-bottom: 110px
+        &__social-network
+            margin-top: 51px
+            transform: translate(6px, 0)
+        &__categories, &__aditional, &__legal
+            margin-top: 49px
+        &__aditional
+            margin-left: 11px
+        &__legal-title, &__legal-ul
+            margin-left: 138px
+        &__form
+            width: 539px
+        &__contact-details
+            margin-top: 60px
+        &__bottom-links
+            left: 1px
+            transform: translateX(0)
+            bottom: -77px
+        &__pay
+            bottom: -77px
 @media (max-width: 740px)
     .hotel-slider
         height: 350px
@@ -145,6 +219,17 @@
             margin-left: 32px
             padding-top: 30px
             height: 450px
+    .footer
+        &__legal-title, &__legal-ul
+            margin-left: 0px
+        &__legal
+            grid-row: 3
+        &__contact-details
+            grid-row: 4
+        &__contact-form
+            grid-row: 5
+        &__input
+            width: 100%
 
 @media (max-width: 700px)
     .container
@@ -217,7 +302,54 @@
         margin: 0 auto
         margin-top: 40px
         margin-bottom: 42px
+    .footer
+        &-wrapper
+            grid-template-columns: 100%
+            grid-column-gap: 0
+
+        &__social-network
+            grid-row: 2
+            display: flex
+            flex-wrap: wrap
+            transform: translate(0, 0)
+        &__title
+            flex-basis: 100%
+            margin-bottom: 20px
+        &__categories
+            grid-row: 5
+        &__aditional
+            grid-row: 4
+            margin-left: 0
+            &-ul
+                margin-left: 0
+        &__second-title
+            margin-left: 0px
+        &__legal
+            grid-row: 3
+        &__contact-details
+            grid-row: 6
+        &__contact-form
+            grid-row: 7
+        &__pay
+            bottom: -104px
+            right: unset
+            left: 0
+        &__contact-text
+            max-width: 249px
+            white-space: normal
+        &__text
+            transform: translateX(0px)
+            max-width: 280px
+        &__input
+            width: 100%
+        &__message
+            width: 100%
+        &__form
+            width: 100%
+
 @media (max-width: 480px)
+    .container
+        width: 88%
     .logo
         &__image
             width: 99px
@@ -266,3 +398,49 @@
             width: 255px
         &__content-wrapper
             margin-left: 20px
+    .footer
+        padding-top: 67px
+        padding-bottom: 98px
+        &__social-network
+            margin-top: 41px
+        &__legal
+            margin-top: 31px
+            &-title
+                margin-bottom: 15px
+        &__aditional
+            margin-top: 29px
+        &__second-title
+            margin-bottom: 18px
+        &__categories
+            margin-top: 29px
+        &__contact-details
+            margin-top: 41px
+        &__contact-icon
+            margin-right: 8px
+            transform: translateY(-3px)
+        &__contact-text
+            transform: translateY(-21px)
+        &__number
+            white-space: nowrap
+        &__text
+            -webkit-transform: translateX(0px)
+            transform: translate(0px, -3px)
+        &__contact-form
+            margin-top: 12px
+        &__feedback-title
+            margin-bottom: 15px
+        &__info
+            order: 2
+            flex-basis: 100%
+            margin-bottom: 14px
+        &__button
+            order: 3
+        &__message
+            margin-bottom: 16px
+        &__bottom-links
+            width: 274px
+            bottom: -45px
+            left: 0
+        &__pay
+            bottom: -77px
+            left: -1px
