@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <header class="navbar">
+    <header class="navbar navbar_mobile_fixed">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo">
@@ -37,7 +37,11 @@
             </svg>
           </a>
           <!-- /.logo -->
-          <form action="/" method="POST" class="search search_navbar">
+          <form
+            action="/"
+            method="POST"
+            class="search navbar__search_mobile_hidden"
+          >
             <input
               type="text"
               class="search__input"
@@ -50,7 +54,7 @@
             </button>
           </form>
           <!-- /.searchh -->
-          <a class="user" href="#">
+          <a class="navbar__user_mobile_hidden" href="#">
             <img
               src="img/main/user.jpg"
               alt="Avatar: nathan"
@@ -70,6 +74,34 @@
       <nav class="navbar-menu">
         <div class="container container_sm">
           <ul class="navbar-menu__list">
+            <li class="navbar-menu__item navbar-menu__item_mobile_visible">
+              <a class="user navbar__user" href="#">
+                <img
+                  src="img/main/user.jpg"
+                  alt="Avatar: nathan"
+                  class="user__avatar"
+                />
+                <span class="user__name user__name_light">Nathan</span>
+              </a>
+              <!-- /.user -->
+            </li>
+            <li
+              class="navbar-menu__item navbar__search navbar-menu__item_mobile_visible"
+            >
+              <form action="/" method="POST" class="search">
+                <input
+                  type="text"
+                  class="search__input"
+                  placeholder="Search location"
+                />
+                <button class="search__button">
+                  <svg class="search__icon">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <!-- /.searchh -->
+            </li>
             <li class="navbar-menu__item">
               <a href="#" class="navbar-menu__link">All Deals</a>
             </li>

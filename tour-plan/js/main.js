@@ -24,4 +24,9 @@ var reviewsSlider = new Swiper(".reviews-slider", {
   spaceBetween: 90,
 });
 
+const menuButton = document.querySelector('.menu-button');
+menuButton.addEventListener('click', function(){
+  document.querySelector('.navbar-menu').classList.toggle('navbar-menu_visible');
+});
+
 $(".newsletter").parallax({ imageSrc: "./img/newsletter/bg.jpg" });
