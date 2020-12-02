@@ -1,0 +1,6 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "vetur.format.defaultFormatter.sass": "none",
+    "editor.defaultFormatter": "syler.sass-indented"
+}
