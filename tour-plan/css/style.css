@@ -1882,12 +1882,39 @@ template {
   padding: 18px 65px 17px 66px;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .modal__info {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #BDBDBD;
+}
+
+.greetings {
+  padding: 60px 0;
+}
+
+.greetings__title {
+  margin-bottom: 60px;
+}
+
+.greetings__btn {
+  padding: 20px 40px;
+  background-color: #EC1F46;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Mulish';
 }
 
 @media (max-width: 1200px) {
@@ -2634,6 +2661,13 @@ template {
   .navbar-menu__list {
     overflow-y: scroll;
     height: 200px;
+  }
+}
+
+@media (max-height: 476px) {
+  .modal__dialog {
+    height: 100%;
+    overflow-y: scroll;
   }
 }
 /*# sourceMappingURL=style.css.map */

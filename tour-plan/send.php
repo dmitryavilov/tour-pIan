@@ -55,4 +55,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-echo '<script>alert("Сообщение отправлено")</script>';
+header('Location: thankyou.html');
