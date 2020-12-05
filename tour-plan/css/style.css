@@ -2099,6 +2099,7 @@ template {
     top: 78px;
     right: 0;
     display: none;
+    height: 100%;
   }
   .navbar-menu_visible {
     display: block;
@@ -2449,6 +2450,16 @@ template {
   .footer__pay {
     bottom: -77px;
     left: -1px;
+  }
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+  .navbar-menu {
+    overflow-y: scroll;
+  }
+  .navbar-menu__list {
+    overflow-y: scroll;
+    height: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -250,6 +250,7 @@
             top: 78px
             right: 0
             display: none
+            height: 100%
             &_visible
                 display: block
             &__list
@@ -485,3 +486,10 @@
         &__pay
             bottom: -77px
             left: -1px
+@media (max-width: 700px) and (orientation:landscape)
+    .navbar
+        &-menu
+            overflow-y: scroll
+            &__list
+                overflow-y: scroll
+                height: 200px
