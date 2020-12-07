@@ -1,4 +1,5 @@
-var hotelSlider = new Swiper(".hotel-slider", {
+$(document).ready(function () {
+  var hotelSlider = new Swiper(".hotel-slider", {
   loop: true,
   navigation: {
     nextEl: ".hotel-slider__button--next",
@@ -56,5 +57,27 @@ document.addEventListener('keydown', keyPress);
 menuButton.addEventListener('click', function(){
   document.querySelector('.navbar-menu').classList.toggle('navbar-menu_visible');
 });
-
+$('.form').each(function(){
+  $(this).validate({
+  errorClass: "invalid",
+  messages: {
+    name: {
+      required: "Please specify your name",
+      minlength: "Min count of symbols - 2"
+    },
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com"
+    },
+    phone:{
+      required: 'Please specify your phone number'
+    }
+  }
+  });
+});
+$('.input__phone').each(function(){
+  $(this).mask('+7(000)000-00-00');
+});
 $(".newsletter").parallax({ imageSrc: "./img/newsletter/bg.jpg" });
+
+});

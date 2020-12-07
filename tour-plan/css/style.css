@@ -1596,17 +1596,21 @@ template {
 }
 
 .footer__input {
-  width: 255px;
+  width: 100%;
   height: 50px;
   padding-top: 18px;
   padding-bottom: 18px;
   padding-left: 23px;
   border-radius: 4px;
-  margin-bottom: 15px;
 }
 
 .footer__input:focus {
   outline: none;
+}
+
+.footer__input-wrapper {
+  width: 255px;
+  margin-bottom: 15px;
 }
 
 .footer__message {
@@ -1821,7 +1825,6 @@ template {
   line-height: 15px;
   color: black;
   border-radius: 4px;
-  margin-bottom: 15px;
 }
 
 .modal__input::-webkit-input-placeholder {
@@ -1840,6 +1843,10 @@ template {
   color: #BDBDBD;
 }
 
+.modal__input:not(:first-child) {
+  margin-top: 15px;
+}
+
 .modal__textarea {
   -ms-flex-preferred-size: 302px;
       flex-basis: 302px;
@@ -1853,6 +1860,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #000;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -1894,6 +1902,10 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
+}
+
+.invalid {
+  color: #EC1F46;
 }
 
 .greetings {
@@ -1946,7 +1958,7 @@ template {
   .variants-wrapper {
     grid-gap: 20px;
   }
-  .footer__input {
+  .footer__input-wrapper {
     width: 100%;
   }
   .footer-wrapper {
@@ -2103,7 +2115,7 @@ template {
   .footer__legal-title, .footer__legal-ul {
     margin-left: 119px;
   }
-  .footer__input {
+  .footer__input-wrapper {
     width: 255px;
   }
   .activities {
@@ -2259,7 +2271,7 @@ template {
     -ms-grid-row: 5;
     grid-row: 5;
   }
-  .footer__input {
+  .footer__input-wrapper {
     width: 100%;
   }
 }
@@ -2489,7 +2501,7 @@ template {
             transform: translateX(0px);
     max-width: 280px;
   }
-  .footer__input {
+  .footer__input-wrapper {
     width: 100%;
   }
   .footer__message {
