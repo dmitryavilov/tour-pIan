@@ -1148,6 +1148,12 @@ template {
   color: #BDBDBD;
 }
 
+.subscribe__input + label {
+  position: absolute;
+  bottom: -20px;
+  font-size: 14px;
+}
+
 .subscribe__button {
   position: absolute;
   right: 0;
@@ -1611,6 +1617,8 @@ template {
 .footer__input-wrapper {
   width: 255px;
   margin-bottom: 15px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .footer__message {

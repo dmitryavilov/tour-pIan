@@ -574,8 +574,9 @@
             type="text"
             class="subscribe__input"
             placeholder="Your email address"
-            name="mail"
+            name="email"
             required
+            aria-required="true"
           />
           <button class="subscribe__button">Send</button>
         </form>
@@ -944,6 +945,7 @@
                   class="input footer__input"
                   placeholder="Your Full Name*"
                   name="name"
+                  minlength="2"
                   required
                 />
               </div>
@@ -953,6 +955,7 @@
                   class="input footer__input input__phone"
                   placeholder="Phone Number*"
                   name="phone"
+                  minlength="16"
                   required
                 />
               </div>
@@ -1008,6 +1011,7 @@
             class="input modal__input input__phone"
             placeholder="Phone Number*"
             name="phone"
+            minlength="16"
             required
           />
           <input
