@@ -1,12 +1,15 @@
+@keyframes mapOn
+    100%
+        opacity: 1
 .hotel
     &_bottom
         padding-top: 23px
-        padding-bottom: 70px
+        padding-bottom: 80px
     &-info
         display: flex
-        align-items: center
         justify-content: space-between
-        padding-bottom: 20px
+        &--bottom
+            padding-bottom: 9px
         &__offer
             margin-left: 14px
             margin-top: 4px
@@ -16,7 +19,9 @@
             font-size: 24px
             line-height: 30px
         &__description
-            margin-top: 5px
+            margin-top: 0px
+        &__rating
+            margin-top: 8px
     &-wrapper
         display: flex
         flex-wrap: wrap
@@ -92,9 +97,9 @@
     height: 8px
     margin-right: 2px
 .rating
-    max-width: 65px
-    width: 100%
     height: 45px
+    min-width: 65px
+    padding-top: 1px
     text-align: center
     color: white
     background-color: $primary
@@ -102,12 +107,13 @@
     &__text
         font-weight: 600
         font-size: 8px
-        line-height: 10px
-        margin: 0
-        padding: 0
+        line-height: 13px
     &__counter
         font-size: 14px
         line-height: 18px
+        &--min
+            font-size: 10px
+            line-height: 13px
 .booking
     background: $dark
     border-radius: 8px
@@ -119,7 +125,7 @@
     &__info
         display: flex
         justify-content: space-between
-        margin-bottom: 9px
+        margin-bottom: 13px
     &__price
         display: flex
         flex-direction: column
@@ -139,7 +145,7 @@
         font-style: normal
         font-weight: normal
         font-size: 12px
-        line-height: 16px
+        line-height: 8px
     &__room
         margin-top: 4px
     &__description
@@ -199,3 +205,15 @@
     background-color: gray
     border-radius: 10px
     overflow: hidden
+    background-image: url('../img/hotel-grid/Map.jpg')
+    &__item
+        opacity: 0
+        width: 100%
+        height: 100%
+        display: none
+        animation: mapOff 0.6s
+        animation-fill-mode: forwards
+    &:hover &__item
+        display: block
+        animation: mapOn 0.6s
+        animation-fill-mode: forwards

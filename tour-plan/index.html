@@ -11,27 +11,12 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=b393a38c-6fb1-415b-9e55-d32c4eb273d1&lang=ru_RU"
-      type="text/javascript"
-    ></script>
-    <script type="text/javascript">
-      ymaps.ready(init);
-
-      function init() {
-        var myMap = new ymaps.Map("map", {
-          center: [37.77531, -122.435325],
-          zoom: 13,
-        });
-      }
-    </script>
   </head>
-
   <body>
     <header class="navbar navbar_mobile_fixed">
       <div class="container">
         <div class="navbar-top wow animate__fadeInDown" data-wow-duration="1s">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo navbar__logo">
             <svg class="logo__image">
               <use xlink:href="img/sprite.svg#horizontal-logo"></use>
             </svg>
@@ -45,7 +30,7 @@
             <input
               type="text"
               class="search__input"
-              placeholder="Search location"
+              placeholder="Search Location"
             />
             <button class="search__button">
               <svg class="search__icon">
@@ -54,7 +39,7 @@
             </button>
           </form>
           <!-- /.searchh -->
-          <a class="user navbar__user_mobile_hidden" href="#">
+          <a class="user navbar__user--pos navbar__user_mobile_hidden" href="#">
             <img
               src="img/main/user.jpg"
               alt="Avatar: nathan"
@@ -92,7 +77,7 @@
                 <input
                   type="text"
                   class="search__input"
-                  placeholder="Search location"
+                  placeholder="Search Location"
                 />
                 <button class="search__button">
                   <svg class="search__icon">
@@ -151,10 +136,10 @@
       data-wow-duration="1s"
     >
       <div class="container">
-        <div class="hotel-info">
+        <div class="hotel-info hotel-info--bottom">
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
-              <div class="stars">
+              <div class="stars hotel-wrapper__stars">
                 <svg class="star">
                   <use xlink:href="img/sprite.svg#star"></use>
                 </svg>
@@ -176,15 +161,18 @@
             </div>
             <!-- /.hotel-wrapper -->
             <p class="hotel-description hotel-info__description">
-              Half-Board/ All Inclusive + Complimentary Activities + Child Stays
-              Free
+              Half-Board / All Inclusive + Complimentary Activities + Child
+              Stays Free
             </p>
             <!-- /.stars -->
           </div>
           <!-- /.hotel-info__text -->
           <div class="rating hotel-info__rating">
-            <span class="rating rating__text">User Ratting</span>
-            <span class="rating__counter">4.5/5</span>
+            <span class="rating__text">User Rattings</span>
+            <br />
+            <span class="rating__counter"
+              >4.5/<span class="rating__counter--min">5</span></span
+            >
           </div>
           <!-- /.hotel-info__rating -->
         </div>
@@ -239,7 +227,6 @@
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-
             <!-- If we need navigation buttons -->
             <button
               class="hotel-slider__button hotel-slider__button--prev"
@@ -291,7 +278,16 @@
               </button>
             </div>
             <!-- /.booking -->
-            <div class="map" id="map"></div>
+            <div class="map" id="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6309.572666419683!2d-122.45001778006552!3d37.74815660186642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e132df4b845%3A0x30f1d1ea492cf47d!2z0JTQttC10LnQvNGBINCb0LjQuiDQnNC40LTQuyDQodC60YPQuw!5e0!3m2!1sru!2sru!4v1607600771534!5m2!1sru!2sru"
+                class="map__item"
+                frameborder="0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
             <!-- /.map -->
           </div>
           <!-- /.hotel-right -->
@@ -329,7 +325,7 @@
                   <use xlink:href="img/sprite.svg#star"></use>
                 </svg>
               </div>
-              <h2 class="variant__title variant__big-title">
+              <h2 class="variant__title variant__title--big">
                 Hotel Blue Haven
               </h2>
               <p class="variant__text">
@@ -339,38 +335,41 @@
                 excepteur ipsum occaecat eiusmod nsectetur enim laborum magna
                 mollit. Ipsum est fugiat velit ea ullamco do
               </p>
-              <div class="variant__icon-wrapper">
+              <div class="variant__icon-wrapper variant__icon-wrapper--big">
                 <svg class="variant__icon">
                   <use xlink:href="img/sprite.svg#geo"></use>
                 </svg>
                 <span class="variant__description"
-                  >1749 Wheeler Ridge Delaware</span
+                  >1749 Wheeler Ridge
+                  <span class="variant__description--long">Delaware</span></span
                 >
               </div>
               <!-- /.variant__icon-wrapper -->
-              <div class="variant__icon-wrapper">
+              <div class="variant__icon-wrapper variant__icon-wrapper--big">
                 <svg class="variant__icon">
                   <use xlink:href="img/sprite.svg#user"></use>
                 </svg>
                 <span class="variant__description">2 x Guests</span>
               </div>
               <!-- /.variant__icon-wrapper -->
-              <div class="variant__icon-wrapper">
+              <div class="variant__icon-wrapper variant__icon-wrapper--big">
                 <svg class="variant__icon">
                   <use xlink:href="img/sprite.svg#home"></use>
                 </svg>
                 <span class="variant__description">1 x Room</span>
               </div>
               <!-- /.variant__icon-wrapper -->
-              <div class="variant__price-wrapper variant__big-price-wrapper">
+              <div class="variant__price-wrapper variant__price-wrapper--big">
                 <span class="variant__price-crossed">$ 10,500</span>
                 <strong class="variant__price-tag">$ 8,500</strong>
-                <button class="variant__button">Book Now</button>
+                <button class="variant__button variant__button--big">
+                  Book Now
+                </button>
               </div>
               <!-- /.variant__price-wrapper -->
             </div>
             <!-- /.variant__text-wrapper -->
-            <div class="variant__offer variant__offer-big">
+            <div class="variant__offer variant__offer--big">
               <span class="variant__offer-text">Flash Offer</span>
             </div>
             <!-- /.variant__offer -->
@@ -389,7 +388,8 @@
                   <use xlink:href="img/sprite.svg#geo"></use>
                 </svg>
                 <span class="variant__description"
-                  >1749 Wheeler Ridge Delaware</span
+                  >1749 Wheeler Ridge
+                  <span class="variant__description--long">Delaware</span></span
                 >
               </div>
               <!-- /.variant__icon-wrapper -->
@@ -433,7 +433,8 @@
                   <use xlink:href="img/sprite.svg#geo"></use>
                 </svg>
                 <span class="variant__description"
-                  >1749 Wheeler Ridge Delaware</span
+                  >1749 Wheeler Ridge
+                  <span class="variant__description--long">Delaware</span></span
                 >
               </div>
               <!-- /.variant__icon-wrapper -->
@@ -471,13 +472,14 @@
               class="variant__image"
             />
             <div class="variant__content-wrapper">
-              <h2 class="variant__title">Luxury Palace</h2>
+              <h2 class="variant__title">Luxury Place</h2>
               <div class="variant__icon-wrapper">
                 <svg class="variant__icon">
                   <use xlink:href="img/sprite.svg#geo"></use>
                 </svg>
                 <span class="variant__description"
-                  >1749 Wheeler Ridge Delaware</span
+                  >1749 Wheeler Ridge
+                  <span class="variant__description--long">Delaware</span></span
                 >
               </div>
               <!-- /.variant__icon-wrapper -->
@@ -521,7 +523,8 @@
                   <use xlink:href="img/sprite.svg#geo"></use>
                 </svg>
                 <span class="variant__description"
-                  >1749 Wheeler Ridge Delaware</span
+                  >1749 Wheeler Ridge
+                  <span class="variant__description--long">Delaware</span></span
                 >
               </div>
               <!-- /.variant__icon-wrapper -->
@@ -564,10 +567,10 @@
       data-image-src="img/newsletter/bg.jpg"
     >
       <div
-        class="newsletter-wrapper wow animate__fadeIn"
+        class="newsletter-wrapper newslette__wrapper wow animate__fadeIn"
         data-wow-duration="2s"
       >
-        <h2 class="newsletter-title">
+        <h2 class="newsletter-title newsletter__title">
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
@@ -577,10 +580,10 @@
           class="subscribe newsletter__subscribe form"
         >
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
-            name="email"
+            name="mail"
             required
             aria-required="true"
           />
@@ -748,8 +751,7 @@
           <div class="card activities__card">
             <img
               src="img/activities/1.jpg"
-              alt="The curious corner 
-                    of chamarel"
+              alt="The curious corner of chamarel"
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
@@ -759,8 +761,7 @@
           <div class="card activities__card">
             <img
               src="img/activities/2.jpg"
-              alt="Gymkhana club golf
-                    course"
+              alt="Gymkhana club golf course"
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
@@ -770,8 +771,7 @@
           <div class="card activities__card">
             <img
               src="img/activities/3.jpg"
-              alt="Tamarind falls hiking
-                    trip - full day"
+              alt="Tamarind falls hiking trip - full day"
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
@@ -781,8 +781,7 @@
           <div class="card activities__card">
             <img
               src="img/activities/4.jpg"
-              alt="The blue marine discovery
-                    quest"
+              alt="The blue marine discovery quest"
               class="card__image"
             />
             <h3 class="card__title card_title_last">
@@ -800,12 +799,14 @@
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer-wrapper">
-          <img
-            src="img/footer/logo.svg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo wow animate__fadeIn"
-            data-wow-duration="1s"
-          />
+          <a class="logo footer__logo" href="index.html">
+            <img
+              src="img/footer/logo.svg"
+              alt="Logo: Best Tour Plan"
+              class="wow animate__fadeIn footer__logo-img"
+              data-wow-duration="1s"
+            />
+          </a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL&nbsp;CATEGORIES</h3>
             <ul class="footer__ul">
@@ -925,18 +926,36 @@
                   <use xlink:href="img/sprite.svg#phone"></use>
                 </svg>
                 <p class="footer__contact-text">
-                  Tel (business hours) : 269 1500 <br />
+                  Tel (business hours) :
+                  <a class="footer__contact-link" href="tel:2691500"
+                    >269 1500</a
+                  >
+                  <br />
                   Tel (hotline) Monday - Saturday:
-                  <span class="footer__number">52-56-61-38</span> (08:00 am –
-                  20:00&nbsp;pm) <br />
-                  Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                  <span class="footer__number"
+                    ><a href="tel:52566138" class="footer__contact-link"
+                      >52-56-61-38</a
+                    ></span
+                  >
+                  (08:00 am – 20:00&nbsp;pm) <br />
+                  Tel (hotline) Sunday:
+                  <a href="tel:52566138" class="footer__contact-link"
+                    >52-56-61-38</a
+                  >
+                  (08:00 am – 14:00 pm)
                 </p>
               </li>
               <li class="footer__item footer__contact-item footer_item_third">
                 <svg class="footer__contact-icon">
                   <use xlink:href="img/sprite.svg#email"></use>
                 </svg>
-                <p class="footer__contact-text">cherly.lawson@example.com</p>
+                <p class="footer__contact-text">
+                  <a
+                    href="mailto:cherly.lawson@example.com"
+                    class="footer__contact-link"
+                    >cherly.lawson@example.com</a
+                  >
+                </p>
               </li>
             </ul>
           </div>
@@ -1024,8 +1043,8 @@
           <input
             type="email"
             class="input modal__input"
-            placeholder="Your Email*"
-            name="email"
+            placeholder="Email*"
+            name="mail"
             required
           />
           <textarea

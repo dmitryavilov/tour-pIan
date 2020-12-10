@@ -25,26 +25,26 @@ var reviewsSlider = new Swiper(".reviews-slider", {
   spaceBetween: 90,
 });
 
-const menuButton = document.querySelector('.menu-button'),
-      modalOverlay = document.querySelector('.modal__overlay'),
-      modalDialog = document.querySelector('.modal__dialog'),
-      closeBtn = document.querySelector('.modal__close'),
-      modalButton = document.querySelector('[data-toggle=modal]');
-const openModal = () => {
+var menuButton = document.querySelector('.menu-button'),
+    modalOverlay = document.querySelector('.modal__overlay'),
+    modalDialog = document.querySelector('.modal__dialog'),
+    closeBtn = document.querySelector('.modal__close'),
+    modalButton = document.querySelector('[data-toggle=modal]');
+function openModal() {
   modalOverlay.classList.add('modal__overlay--active');
   modalDialog.classList.add('modal__dialog--active');
   document.querySelector('body').style.overflowY="hidden";
 }
 
-const closeModal = (e) => {
+function closeModal(){
   event.preventDefault();
   modalOverlay.classList.remove('modal__overlay--active');
   modalDialog.classList.remove('modal__dialog--active');
   document.querySelector('body').style.overflowY="scroll";
 }
 
-const keyPress = (e) => {
-  if (e.keyCode == 27){
+function keyPress(event) {
+  if (event.keyCode == 27){
     modalOverlay.classList.remove('modal__overlay--active');
     modalDialog.classList.remove('modal__dialog--active');
     document.querySelector('body').style.overflowY="scroll";
