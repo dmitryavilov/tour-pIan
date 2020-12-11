@@ -16,5 +16,9 @@
         &__link
             text-decoration: none
             color: inherit
-            &:hover
-                color: $primary
+@media (min-width: 992px)
+    .breadcrumb
+        &-list
+            &__link
+                &:hover
+                    color: $primary
