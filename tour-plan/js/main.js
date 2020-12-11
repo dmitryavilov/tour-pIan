@@ -2,8 +2,8 @@ $(document).ready(function () {
   var hotelSlider = new Swiper(".hotel-slider", {
   loop: true,
   navigation: {
-    nextEl: ".hotel-slider__button--next",
-    prevEl: ".hotel-slider__button--prev",
+    nextEl: ".hotel-slider__button_next",
+    prevEl: ".hotel-slider__button_prev",
   },
   keyboard: {
     enabled: true,
@@ -15,8 +15,8 @@ $(document).ready(function () {
 var reviewsSlider = new Swiper(".reviews-slider", {
   loop: true,
   navigation: {
-    nextEl: ".reviews-slider__button--next",
-    prevEl: ".reviews-slider__button--prev",
+    nextEl: ".reviews-slider__button_next",
+    prevEl: ".reviews-slider__button_prev",
   },
   keyboard: {
     enabled: true,
@@ -31,22 +31,22 @@ var menuButton = document.querySelector('.menu-button'),
     closeBtn = document.querySelector('.modal__close'),
     modalButton = document.querySelectorAll('[data-toggle=modal]');
 function openModal() {
-  modalOverlay.classList.add('modal__overlay--active');
-  modalDialog.classList.add('modal__dialog--active');
+  modalOverlay.classList.add('modal__overlay_active');
+  modalDialog.classList.add('modal__dialog_active');
   document.querySelector('body').style.overflowY="hidden";
 }
 
 function closeModal(){
   event.preventDefault();
-  modalOverlay.classList.remove('modal__overlay--active');
-  modalDialog.classList.remove('modal__dialog--active');
+  modalOverlay.classList.remove('modal__overlay_active');
+  modalDialog.classList.remove('modal__dialog_active');
   document.querySelector('body').style.overflowY="scroll";
 }
 
 function keyPress(event) {
   if (event.keyCode == 27){
-    modalOverlay.classList.remove('modal__overlay--active');
-    modalDialog.classList.remove('modal__dialog--active');
+    modalOverlay.classList.remove('modal__overlay_active');
+    modalDialog.classList.remove('modal__dialog_active');
     document.querySelector('body').style.overflowY="scroll";
   }
 }
