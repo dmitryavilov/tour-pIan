@@ -29,7 +29,7 @@ var menuButton = document.querySelector('.menu-button'),
     modalOverlay = document.querySelector('.modal__overlay'),
     modalDialog = document.querySelector('.modal__dialog'),
     closeBtn = document.querySelector('.modal__close'),
-    modalButton = document.querySelector('[data-toggle=modal]');
+    modalButton = document.querySelectorAll('[data-toggle=modal]');
 function openModal() {
   modalOverlay.classList.add('modal__overlay--active');
   modalDialog.classList.add('modal__dialog--active');
@@ -50,7 +50,10 @@ function keyPress(event) {
     document.querySelector('body').style.overflowY="scroll";
   }
 }
-modalButton.addEventListener('click', openModal);
+
+for(i=0;i<modalButton.length;i++){
+  modalButton[i].addEventListener('click', openModal);
+}
 closeBtn.addEventListener('click', closeModal);
 document.addEventListener('keydown', keyPress);
 

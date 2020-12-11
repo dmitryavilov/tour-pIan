@@ -120,7 +120,7 @@
     .variant
         &:first-child
             grid-column-gap: 25px
-            grid-template-columns: 370px 300px
+            grid-template-columns: 50% 300px
         &__content-wrapper
             margin-left: 32px
         &__text
@@ -238,7 +238,7 @@
             width: 92%
             align-items: flex-start
     .card
-        width: 280px
+        width: 70%
         height: 255px
     .activities
         &-wrapper
@@ -253,6 +253,7 @@
             grid-column-end: 2
             height: 730px
             grid-column-gap: 0px
+            grid-template-columns: 100% 300px
         &__big-image
             height: 250px
         &__big-content-wrapper
@@ -364,14 +365,15 @@
     .reviews
         &-slider
             &__item
-                max-width: 281px
-                min-height: 483px
+                max-width: 80%
+                min-height: 422px
+                padding: 0 30px 30px 34px
                 &::before
                     display: none
                 &::after
                     display: none
             &__text
-                width: 219px
+                width: 80%
             &__button
                 top: 44px
                 &--prev
@@ -559,6 +561,16 @@
     .booking
         &__number
             transform: translateX(-5px)
+    .card
+        width: 280px
+    .reviews
+        &-slider
+            &__item
+                padding: 0 60px 30px 64px
+                max-width: 281px
+                min-height: 483px
+            &__text
+                width: 219px
 @media (max-width: 370px)
     .container
         max-width: 280px
