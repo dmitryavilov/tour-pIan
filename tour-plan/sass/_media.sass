@@ -173,10 +173,15 @@
         &__input-wrapper
             width: 255px
 
-        .greetings
-            &__btn
+    .greetings
+        &__btn
+            &:hover
+                box-shadow: 0 0 0px
+    .breadcrumb
+        &-list
+            &__link
                 &:hover
-                    box-shadow: 0 0 0px
+                    color: inherit
 @media (max-width: 768px)
     .logo
         &__image
