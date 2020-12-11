@@ -35,7 +35,7 @@
     .navbar
         &__logo
             margin-right: auto
-        &__user--pos
+        &__user_pos
             margin-left: 73px
     .user
         &__name
@@ -75,10 +75,10 @@
                 max-width: 455px
             &__button
                 top: 49%
-                &--prev
+                &_prev
                     left: 0
                     transform: scale(1, 1) translateY(-52%)
-                &--next
+                &_next
                     right: 0
                     transform: scale(-1, 1) translateY(-52%)
             &__date
@@ -121,7 +121,7 @@
         &__text
             margin-bottom: 30px
         &__button
-            &--big
+            &_big
                 right: 30px
     .newsletter
         padding: 72px 0 73px 0
@@ -371,11 +371,11 @@
                 width: 80%
             &__button
                 top: 44px
-                &--prev
+                &_prev
                     left: 45%
                     transform: translate(-50%, -50%)
                     margin-left: -65px
-                &--next
+                &_next
                     right: 45%
                     margin-right: -65px
                     transform: translate(50%, -50%) scale(-1, -1)
@@ -460,7 +460,7 @@
         &-right
             min-height: 400px
         &-info
-            &--bottom
+            &_bottom
                 padding-bottom: 25px
 
         &-wrapper
@@ -496,6 +496,7 @@
             grid-template-columns: 300px
     .variant
         &__text
+            max-height: 177px
             font-size: 13px
             max-width: 255px
         &:first-child
@@ -580,7 +581,7 @@
             grid-template-columns: 280px
         &__button
             right: 14px
-            &--big
+            &_big
                 right: 14px
         &__big-content-wrapper
             margin-left: 16px
@@ -598,9 +599,9 @@
             margin-top: 24px
         &-slider
             &__button
-                &--prev
+                &_prev
                     left: 41%
-                &--next
+                &_next
                     right: 41%
             &__item
                 min-height: 430px
@@ -629,9 +630,9 @@
                 background-size: 12px 12px
                 width: 12px
                 height: 12px
-                &--prev
+                &_prev
                     left: 6px
-                &--next
+                &_next
                     right: 8px
 @media (max-width: 700px) and (orientation:landscape)
     .navbar
