@@ -3,6 +3,7 @@
     &__title
         margin-bottom: 60px
     &__btn
+        max-width: 144px
         padding: 20px 40px
         background-color: $primary
         font-style: normal
@@ -10,12 +11,16 @@
         font-size: 12px
         line-height: 15px
         color: white
-        text-decoration: none
         border-radius: 4px
         font-family: 'Mulish'
         text-overflow: ellipsis
+        overflow-x: hidden
+        &-link
+            text-decoration: none
 @media (min-width: 992px)
     .greetings
         &__btn
+            transition: 0.4s
             &:hover
+                color: #ffffe0
                 box-shadow: 0 0 12px $primary
